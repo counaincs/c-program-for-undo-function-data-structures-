@@ -1,0 +1,90 @@
+#include <iostream>
+using namespace std;
+int stack[100], x =100, top =- 1;
+void push ( int value ) 
+ {
+       if ( top >= x-1)
+             cout << " This is Stack Overflow " << endl;
+               else 
+                 {
+                    top++;
+                       stack [top] = value;
+                         }
+                         }
+                                 void pop()
+                                          {
+                                                   if ( top <= -1)
+                                                             cout << "no element is present " << endl;
+                                                                      else 
+                                                                               {
+                                                                                         cout << " The undo element  is "<< stack[top] << endl;
+                                                                                                   top--;
+                                                                                                             }
+                                                                                                                       }
+                                                                                                                                     void show()
+                                                                                                                                                    {
+                                                                                                                                                                   if ( top >= 0) 
+                                                                                                                                                                                    {
+                                                                                                                                                                                                   cout << " the elements are: " ;
+                                                                                                                                                                                                                  for ( int i =top; i >= 0; i--)
+                                                                                                                                                                                                                                 cout << stack[i] << " ";
+                                                                                                                                                                                                                                                cout << endl;
+                                                                                                                                                                                                                                                                 }
+                                                                                                                                                                                                                                                                                 else
+                                                                                                                                                                                                                                                                                                cout << " no data to show\n"
+                                                                                                                                                                                                                                                                                                                       " \n\t ";
+                                                                                                                                                                                                                                                                                                                                      }
+                                                                                                                                                                                                                                                                                                                                      int main()
+                                                                                                                                                                                                                                                                                                                                       {
+                                                                                                                                                                                                                                                                                                                                       int ch, value;
+                                                                                                                                                                                                                                                                                                                                       system("color A0");
+                                                                                                                                                                                                                                                                                                                                       cout <<" \t \b TO IMPLEMNET THE UNDO FUCNTION \t \n";
+                                                                                                                                                                                                                                                                                                                                       system("color B0");
+                                                                                                                                                                                                                                                                                                                                       cout<<"\t This program is made by 3rd sem students \t \n \t Mohammed counain shafi \t  \n \t Mohammed shafeeula \t  \n  \t Md raheem khan \t  \n" << endl;
+   system("color E8");
+   cout << "press 1. to add the data " << endl;
+   cout << " press 2. to undo the recently inserted data  " << endl;
+   cout << " press 3. to display the data " << endl;
+   cout << " press 4. to Exit " << endl;
+   do
+    {
+    cout << " Please enter the choice: " << endl;
+    cin >> ch;
+    switch ( ch )
+      {
+case 1: 
+system("color E1");
+    {
+    cout << " Please enter the value to be added: " << endl;
+    cin >> value;
+    push ( value );
+    break;
+        }
+               case 2:
+                      system("color E4");
+                             {
+                                    pop();
+                                            break;
+                                                   }
+                                                                case 3: 
+                                                                             system("color E5");
+                                                                                            {
+                                                                                                            show();
+                                                                                                                            break;
+                                                                                                                                           } 
+                                                                                                                                                               case 4:
+                                                                                                                                                                                   system("color C7");
+                                                                                                                                                                                                      {
+                                                                                                                                                                                                                         cout << " Exit " << endl;
+                                                                                                                                                                                                                                            break;
+                                                                                                                                                                                                                                                                }
+                                                                                                                                                                                                                                                                                        default:
+                                                                                                                                                                                                                                                                                                                system("color 7");
+                                                                                                                                                                                                                                                                                                                                         {
+                                                                                                                                                                                                                                                                                                                                                                  cout << " Invalid Choice " << endl;
+                                                                                                                                                                                                                                                                                                                                                                                           }
+                                                                                                                                                                                                                                                                                                                                                                                                                    }
+                                                                                                                                                                                                                                                                                                                                                                                                                                             }
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                     while ( ch != 4);
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              return 0;
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      }
